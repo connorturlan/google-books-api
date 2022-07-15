@@ -5,6 +5,50 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Google Books API</title>
+
+		<link rel="stylesheet" href="./styles/style.css" />
+		<script src="./src/index.js"></script>
 	</head>
-	<body></body>
+	<body class="body">
+		<header class="header">
+			<h1 class="header__title">Google Books API - Search</h1>
+			<p class="header__content">
+				A search for books using Google's Google Books API.
+			</p>
+		</header>
+		<form class="search">
+			<input
+				class="search__text"
+				type="text"
+				name="book-title"
+				id="search-query"
+			/>
+			<input
+				class="button search__button"
+				type="submit"
+				name="search"
+				id="search-button"
+			/>
+		</form>
+		<main class="results">
+			<div class="results__card book">
+				<img
+					src="https://www.placecage.com/200/300"
+					alt="Harry Potter"
+					class="book__image"
+				/>
+				<h2 class="book__title">Harry Potter</h2>
+				<h3 class="book__author">That one lady</h3>
+				<p class="book__content">
+					Harry and his friends attack an old man that they believe is
+					evil.
+				</p>
+			</div>
+			<div class="results__card book"></div>
+			<div class="results__card book"></div>
+			<div class="results__card book"></div>
+			<div class="results__card book"></div>
+			<div class="results__card book"></div>
+		</main>
+	</body>
 </html>

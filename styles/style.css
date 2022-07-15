@@ -1,0 +1,49 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  background-color: #e3e3e3;
+}
+
+.header {
+  background-color: white;
+  padding: 20px;
+}
+
+.search {
+  background-color: white;
+  padding: 20px;
+}
+
+.results {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+  background-color: white;
+}
+.results__card {
+  margin: 10px;
+  background-color: orange;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+}
+.book__image {
+  height: 50%;
+}
+.book__title {
+  border: 1px solid black;
+}
+.book__author {
+  border: 1px solid black;
+}
+.book__content {
+  border: 1px solid black;
+}
