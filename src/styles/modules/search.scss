@@ -1,0 +1,61 @@
+@use "../partials/palette";
+
+.search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	width: 660px;
+	height: 214px;
+
+	border-radius: 20px;
+
+	background-color: palette.$light;
+
+	font-family: Arial, Helvetica, sans-serif;
+	color: palette.$font-colour;
+
+	&--top {
+		position: fixed;
+		top: 0px;
+
+		border-radius: 0px 0px 20px 20px;
+	}
+
+	&__header {
+		text-align: center;
+		width: 100%;
+
+		margin: 20px;
+
+		font-size: 50px;
+		font-weight: 100;
+	}
+
+	&__query {
+		width: 400px;
+		height: 60px;
+
+		margin: 10px;
+
+		border-radius: 10px;
+
+		background-color: palette.$font-bg;
+		color: palette.$font-colour;
+	}
+
+	&__submit {
+		width: 200px;
+		height: 60px;
+
+		margin: 10px;
+
+		border-radius: 10px;
+
+		font-size: 40px;
+		font-weight: 100;
+
+		background-color: palette.$accent;
+	}
+}
