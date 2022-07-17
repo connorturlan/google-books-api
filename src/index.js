@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/style.css";
-
-const API_KEY = "AIzaSyAkLhGeKw4fo_rYUCVb35HmO2cqmG-aHtI";
+import { API_KEY } from "./api";
 
 function searchAPI(query) {}
 
