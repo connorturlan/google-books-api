@@ -26,14 +26,16 @@
 	@include border.book;
 
 	&__img {
-		height: 50%;
+		height: 200px;
+
+		object-fit: contain;
 	}
 
 	&__title {
 		margin: 10px;
 
 		font-weight: 100;
-		font-size: 40px;
+		font-size: 20px;
 		text-transform: uppercase;
 	}
 
@@ -41,13 +43,15 @@
 		margin: 10px;
 
 		font-weight: 100;
-		font-size: 36px;
+		font-size: 16px;
 		text-transform: capitalize;
 	}
 
 	&__desc {
 		margin: 10px;
 
-		font-size: 20px;
+		font-size: 14px;
+
+		overflow-y: hidden;
 	}
 }

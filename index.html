@@ -2,16 +2,16 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+		<!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Google Books API</title>
 
 		<link rel="stylesheet" href="./styles/style.css" />
-		<script src="./src/index.js"></script>
+		<script type="module" src="./src/index.js"></script>
 	</head>
 	<body class="body">
-		<form class="search search--top">
+		<form class="search">
 			<h1 class="search__header">Google Books - Search</h1>
 			<input
 				class="search__query"
@@ -28,7 +28,7 @@
 			/>
 		</form>
 		<main id="results" class="results">
-			<div class="book" id="book0">
+			<!-- <div class="book" id="book0">
 				<img src="" alt="" class="book__img" />
 				<h2 class="book__title">book title</h2>
 				<h3 class="book__author">book author</h3>
@@ -36,7 +36,7 @@
 					This book is about some really interesting topic that you
 					will 100% like and will never put down!
 				</p>
-			</div>
+			</div> -->
 		</main>
 	</body>
 </html>
