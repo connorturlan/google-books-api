@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Google Books API</title>
@@ -26,6 +27,13 @@
 				value="Search"
 			/>
 		</form>
-		<main id="results"></main>
+		<main id="results">
+			<div class="book">
+				<img src="" alt="" class="book__img" />
+				<h2 class="book__title"></h2>
+				<h3 class="book__author"></h3>
+				<p class="book__desc"></p>
+			</div>
+		</main>
 	</body>
 </html>

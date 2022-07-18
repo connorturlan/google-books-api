@@ -12,3 +12,11 @@
 
 	background-color: palette.$dark;
 }
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: space-between;
+	background-color: palette.$light;
+}
