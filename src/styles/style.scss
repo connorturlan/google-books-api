@@ -1,6 +1,7 @@
 @use "./partials/palette";
 
 @use "./modules/search.scss";
+@use "./modules/book.scss";
 
 .body {
 	display: flex;
@@ -13,10 +14,9 @@
 	background-color: palette.$dark;
 }
 
-.card {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: space-between;
-	background-color: palette.$light;
+.results {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+
+	margin-top: 100px;
 }

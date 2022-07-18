@@ -45,3 +45,78 @@ Application Design (required):
 -   [Using Async Await](https://dmitripavlutin.com/javascript-fetch-async-await/)
 -   [Using Postman to Test APIs](https://www.blazemeter.com/blog/how-use-postman-test-apis)
 -   [Download Postman](https://www.postman.com/downloads/)
+
+
+{
+  "kind": "books#volume",
+  "id": "sD1bzgEACAAJ",
+  "etag": "bycJqMYX++A",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/sD1bzgEACAAJ",
+  "volumeInfo": {
+    "title": "C# Programming: From Problem Analysis to Program Design",
+    "authors": [
+      "Barbara Doyle"
+    ],
+    "publisher": "Cengage Learning",
+    "publishedDate": "2015-06-30",
+    "description": "Respected author Dr. Barbara Doyle admirably balances programming principles and concepts with practical coding skill to create a strong professional foundation for beginning programmers in her latest edition of C# PROGRAMMING: FROM PROBLEM ANALYSIS TO PROGRAM DESIGN. This 5th edition’s straightforward approach and understandable vocabulary make it easy for readers to grasp new programming concepts without distraction. The book introduces a variety of fundamental programming concepts, from data types and expressions to arrays and collections, all using the latest version of today’s popular C# language. Important Notice: Media content referenced within the product description or the product text may not be available in the ebook version.",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "1285856872"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9781285856872"
+      }
+    ],
+    "readingModes": {
+      "text": false,
+      "image": false
+    },
+    "pageCount": 1088,
+    "printType": "BOOK",
+    "categories": [
+      "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=sD1bzgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=sD1bzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=sD1bzgEACAAJ&dq=programming&hl=&cd=10&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=sD1bzgEACAAJ&dq=programming&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/C_Programming_From_Problem_Analysis_to_P.html?hl=&id=sD1bzgEACAAJ"
+  },
+  "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+  },
+  "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=sD1bzgEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+  },
+  "searchInfo": {
+    "textSnippet": "The book introduces a variety of fundamental programming concepts, from data types and expressions to arrays and collections, all using the latest version of today’s popular C# language."
+  }
+}

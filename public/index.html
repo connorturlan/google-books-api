@@ -11,7 +11,7 @@
 		<script src="./src/index.js"></script>
 	</head>
 	<body class="body">
-		<form class="search">
+		<form class="search search--top">
 			<h1 class="search__header">Google Books - Search</h1>
 			<input
 				class="search__query"
@@ -27,12 +27,15 @@
 				value="Search"
 			/>
 		</form>
-		<main id="results">
-			<div class="book">
+		<main id="results" class="results">
+			<div class="book" id="book0">
 				<img src="" alt="" class="book__img" />
-				<h2 class="book__title"></h2>
-				<h3 class="book__author"></h3>
-				<p class="book__desc"></p>
+				<h2 class="book__title">book title</h2>
+				<h3 class="book__author">book author</h3>
+				<p class="book__desc">
+					This book is about some really interesting topic that you
+					will 100% like and will never put down!
+				</p>
 			</div>
 		</main>
 	</body>

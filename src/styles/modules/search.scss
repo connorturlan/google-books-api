@@ -1,4 +1,6 @@
 @use "../partials/palette";
+@use "../partials/typography";
+@use "../partials/border";
 
 .search {
 	display: flex;
@@ -13,8 +15,10 @@
 
 	background-color: palette.$light;
 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: typography.$font;
 	color: palette.$font-colour;
+
+	@include border.search;
 
 	&--top {
 		position: fixed;
@@ -41,8 +45,10 @@
 
 		border-radius: 10px;
 
+		font-family: inherit;
+		color: inherit;
+
 		background-color: palette.$font-bg;
-		color: palette.$font-colour;
 	}
 
 	&__submit {
@@ -53,6 +59,8 @@
 
 		border-radius: 10px;
 
+		font-family: inherit;
+		color: palette.$accent-font;
 		font-size: 40px;
 		font-weight: 100;
 

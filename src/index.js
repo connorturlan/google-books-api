@@ -20,15 +20,50 @@ async function searchAPI(query) {
 	}
 }
 
-function Card(props) {
-	return "";
+function getBookCard(index, book) {
+	return (
+		<div class="book" key={index}>
+			<img
+				src="{book.volumeInfo.imageLinks.smallThumbnail}"
+				alt=""
+				class="book__img"
+			/>
+			<h2 class="book__title">{book.volumeInfo.title}</h2>
+			<h3 class="book__author">{book.volumeInfo.authors.join(", ")}</h3>
+			<p class="book__desc">{book.volumeInfo.description}</p>
+		</div>
+	);
+}
+
+function getBookCards(books) {
+	return books.reduce((cards, book) => {
+		cards.push(getBookCard(book.id, book));
+		return cards;
+	}, []);
 }
 
 class Results extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = { books: [] };
+	}
+
+	// update the books stored for the results.
+	updateBooks(newBooks) {
+		console.log(newBooks);
+		this.setState({
+			books: [...newBooks],
+		});
+	}
+
+	// render the component to the screen.
 	render() {
-		return <div></div>;
+		return <div>{getBookCards(this.state["books"])}</div>;
 	}
 }
+
+class Search extends React.Component {}
 
 // get the results container.
 const results = ReactDOM.createRoot(document.getElementById("results"));
@@ -44,7 +79,7 @@ async function performSearch() {
 	updateSearchBar(books.length);
 
 	// update the grid with all books found.
-	updateGrid(books);
+	updateResults(books);
 
 	console.log(books);
 }
@@ -57,7 +92,8 @@ async function fetchBooks(query) {
 
 function updateSearchBar(status) {}
 
-function updateGrid(status) {
+function updateResults(books) {
+	results.updateBooks(books);
 	results.render(<Results />);
 }
 
