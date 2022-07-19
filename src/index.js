@@ -2,6 +2,8 @@ import { searchAPI } from "./api.js";
 import * as Results from "./results.js";
 import * as SearchBar from "./searchBar.js";
 
+var firstSearch = true;
+
 async function performSearch() {
 	// get the query string.
 	let query = document.getElementById("search-query").value;
@@ -10,7 +12,8 @@ async function performSearch() {
 	let books = await fetchBooks(query);
 
 	// update the searchbar style on success.
-	SearchBar.update({ query: query, books: books.length });
+	SearchBar.update({ query: query, books: books.length }, false);
+	//firstSearch = false;
 
 	// update the grid with all books found.
 	Results.update(books);
@@ -29,5 +32,3 @@ search.addEventListener("submit", (event) => {
 	event.preventDefault();
 	performSearch();
 });
-
-

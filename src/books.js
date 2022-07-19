@@ -20,8 +20,8 @@ function createBookCard(book) {
 	author.innerText = info.authors;
 
 	const desc = document.createElement("p");
-	desc.innerText = info.description;
 	desc.classList.add("book__desc");
+	desc.innerText = info.description;
 
 	for (let node of [img, title, author, desc]) {
 		card.appendChild(node);
