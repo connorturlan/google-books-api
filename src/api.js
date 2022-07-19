@@ -1,4 +1,7 @@
-import { API_KEY } from "./key.js";
+//import { API_KEY } from "./key.js";
+
+// sigh... api key can't be hidden for it to work on gh-pages.
+const API_KEY = "AIzaSyAUHYgEMt0T9pnLUCNlgq_1Bg90r3B41wE";
 
 function showErrorMessage(status) {
 	alert(`Error while searching for book. (${status})`);
