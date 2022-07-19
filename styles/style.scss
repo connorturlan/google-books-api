@@ -24,9 +24,8 @@
 }
 
 .modal {
-	&--bg {
+	&__bg {
 		@include defaults.flex-center;
-		display: none;
 
 		position: absolute;
 		top: 0;
@@ -40,5 +39,9 @@
 		margin: 0px;
 
 		background-color: rgba(0, 0, 0, 0.2);
+
+		&--hidden {
+			display: none;
+		}
 	}
 }

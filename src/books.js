@@ -1,4 +1,4 @@
-function getBookCard(book) {
+function createBookCard(book) {
 	const card = document.createElement("div");
 	card.classList.add("book");
 
@@ -32,7 +32,7 @@ function getBookCard(book) {
 
 export function getBookCards(books) {
 	return books.reduce((cards, book) => {
-		cards.push(getBookCard(book));
+		cards.push(createBookCard(book));
 		return cards;
 	}, []);
 }

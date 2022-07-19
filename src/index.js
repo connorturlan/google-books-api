@@ -2,10 +2,6 @@ import { searchAPI } from "./api.js";
 import * as Results from "./results.js";
 import * as SearchBar from "./searchBar.js";
 
-function showErrorMessage(status) {
-	alert(`Error while searching for book. (${status})`);
-}
-
 async function performSearch() {
 	// get the query string.
 	let query = document.getElementById("search-query").value;

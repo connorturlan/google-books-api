@@ -103,11 +103,10 @@
   margin-top: 200px;
 }
 
-.modal--bg {
+.modal__bg {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -116,4 +115,7 @@
   height: 100vh;
   margin: 0px;
   background-color: rgba(0, 0, 0, 0.2);
+}
+.modal__bg--hidden {
+  display: none;
 }

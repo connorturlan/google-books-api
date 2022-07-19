@@ -1,4 +1,8 @@
-export const API_KEY = "AIzaSyAUHYgEMt0T9pnLUCNlgq_1Bg90r3B41wE";
+import { API_KEY } from "./key.js";
+
+function showErrorMessage(status) {
+	alert(`Error while searching for book. (${status})`);
+}
 
 // poll the google books api given a specific query.
 export async function searchAPI(query) {
