@@ -1,15 +1,17 @@
 @use "./partials/palette";
 
+@use "./modules/defaults.scss";
 @use "./modules/search.scss";
 @use "./modules/book.scss";
 
 .body {
-	display: flex;
+	@include defaults.flex-center;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 
 	min-height: 100vh;
+
+	margin: 0px;
+	padding: 100px;
 
 	background-color: palette.$dark;
 }
@@ -19,4 +21,24 @@
 	grid-template-columns: repeat(4, 1fr);
 
 	margin-top: 200px;
+}
+
+.modal {
+	&--bg {
+		@include defaults.flex-center;
+		display: none;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		z-index: bottom;
+
+		width: 100vw;
+		height: 100vh;
+
+		margin: 0px;
+
+		background-color: rgba(0, 0, 0, 0.2);
+	}
 }

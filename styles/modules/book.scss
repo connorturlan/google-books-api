@@ -11,7 +11,7 @@
 	width: 300px;
 	height: 400px;
 
-	margin: 10px;
+	margin: 20px;
 	padding: 20px;
 	border-radius: 20px;
 
@@ -24,6 +24,10 @@
 	text-justify: inter-word;
 
 	@include border.book;
+
+	&:hover {
+		outline: 4px solid palette.$accent;
+	}
 
 	&__img {
 		height: 200px;
