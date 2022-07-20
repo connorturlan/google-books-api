@@ -1,3 +1,6 @@
+const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+const languageNames = new Intl.DisplayNames(["en"], { type: "language" });
+
 // gather the modal elements.
 const modal = document.getElementById("modal");
 const modalPane = document.getElementById("modal--bg");
@@ -28,11 +31,13 @@ export function setBook(book) {
 
 	const country = modal.querySelector(".modal__country");
 	country.innerText =
-		"Released in: " + (book.saleInfo.country || "Data unavailable.");
+		"Released in: " +
+		(regionNames.of(book.saleInfo.country) || "Data unavailable.");
 
 	const lang = modal.querySelector(".modal__langs");
 	lang.innerText =
-		"Availiable in: " + (info.language || "Description unavailable.");
+		"Availiable in: " +
+		(languageNames.of(info.language) || "Description unavailable.");
 
 	const link = modal.querySelector(".modal__link");
 	link.href =
