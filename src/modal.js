@@ -18,7 +18,7 @@ export function setBook(book) {
 	author.innerText = (info.authors || []).join(", ") || "Author unavailable";
 
 	const desc = modal.querySelector(".modal__desc");
-	desc.innerText = info.description || "Description unavailable.";
+	desc.innerHTML = info.description || "Description unavailable.";
 
 	const img = modal.querySelector(".modal__img");
 	img.src =
