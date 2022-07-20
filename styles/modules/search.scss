@@ -96,6 +96,12 @@
 
 			margin: 5px;
 		}
+
+		&--wait {
+			content: "waiting";
+
+			background-color: palette.$dark;
+		}
 	}
 
 	&__help {

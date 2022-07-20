@@ -9,6 +9,10 @@ function showErrorMessage(status) {
 
 // poll the google books api given a specific query.
 export async function searchAPI(query) {
+	if (query === "") {
+		return false;
+	}
+
 	const response = await fetch(
 		`https://www.googleapis.com/books/v1/volumes?q=${encodeURI(
 			query

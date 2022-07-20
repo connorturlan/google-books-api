@@ -17,6 +17,8 @@ export function update(books) {
 	clear();
 
 	// process all the books into cards and append them to the results.
-	const cards = getBookCards(books);
-	cards.reduce((n, card) => results.appendChild(card), null);
+	if (books.length > 0) {
+		const cards = getBookCards(books);
+		cards.reduce((n, card) => results.appendChild(card), null);
+	}
 }

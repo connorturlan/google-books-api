@@ -73,6 +73,10 @@
     margin: 5px;
   }
 }
+.search__submit--wait {
+  content: "waiting";
+  background-color: #2c3639;
+}
 .search__help {
   display: inline-block;
   margin: 0px;

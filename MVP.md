@@ -12,8 +12,8 @@ Page should include the following:
 
 -   Header section introducing the page
 -   Form containing a text input and a submit / search button
-
 -   A grid of books
+
     Instructions:
 
 -   When the submit button is clicked you need the request books from the Google books API using the input value as your query string
