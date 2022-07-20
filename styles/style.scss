@@ -4,6 +4,8 @@
 @use "./modules/defaults.scss";
 @use "./modules/search.scss";
 @use "./modules/book.scss";
+@use "./modules/results.scss";
+@use "./modules/modal.scss";
 
 .body {
 	@include defaults.flex-center;
@@ -16,47 +18,4 @@
 	padding: 0px;
 
 	background-color: palette.$dark;
-}
-
-.results {
-	display: grid;
-	margin-top: 200px;
-	margin-bottom: 100px;
-
-	@include devices.phone {
-		margin-top: 100px;
-		grid-template-columns: repeat(1, 1fr);
-	}
-	@include devices.tablet {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@include devices.laptop {
-		grid-template-columns: repeat(3, 1fr);
-	}
-	@include devices.desktop {
-		grid-template-columns: repeat(4, 1fr);
-	}
-}
-
-.modal {
-	&__bg {
-		@include defaults.flex-center;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-
-		z-index: bottom;
-
-		width: 100vw;
-		height: 100vh;
-
-		margin: 0px;
-
-		background-color: rgba(0, 0, 0, 0.2);
-
-		&--hidden {
-			display: none;
-		}
-	}
 }

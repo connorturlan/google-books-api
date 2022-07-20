@@ -130,17 +130,6 @@
   overflow-y: hidden;
 }
 
-.body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0px;
-  padding: 0px;
-  background-color: #2c3639;
-}
-
 .results {
   display: grid;
   margin-top: 200px;
@@ -172,7 +161,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: bottom;
@@ -183,4 +172,15 @@
 }
 .modal__bg--hidden {
   display: none;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: #2c3639;
 }

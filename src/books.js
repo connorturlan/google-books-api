@@ -1,7 +1,10 @@
+import * as Modal from "./modal.js";
+
 function createBookCard(book) {
 	const card = document.createElement("div");
 	card.classList.add("book");
 
+	// create the card elements.
 	let info = book.volumeInfo;
 
 	const img = document.createElement("img");
@@ -26,6 +29,12 @@ function createBookCard(book) {
 	for (let node of [img, title, author, desc]) {
 		card.appendChild(node);
 	}
+
+	// attach the modal updating style.
+	card.addEventListener("click", (event) => {
+		Modal.setBook(book);
+		Modal.show();
+	});
 
 	return card;
 }

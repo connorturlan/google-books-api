@@ -1,6 +1,7 @@
 import { searchAPI } from "./api.js";
 import * as Results from "./results.js";
 import * as SearchBar from "./searchBar.js";
+import * as Modal from "./modal.js";
 
 var firstSearch = true;
 

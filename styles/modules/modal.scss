@@ -1,0 +1,27 @@
+@use "../partials/palette";
+@use "../partials/devices";
+
+@use "../modules/defaults.scss";
+
+.modal {
+	&__bg {
+		@include defaults.flex-center;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+
+		z-index: bottom;
+
+		width: 100vw;
+		height: 100vh;
+
+		margin: 0px;
+
+		background-color: rgba(0, 0, 0, 0.2);
+
+		&--hidden {
+			display: none;
+		}
+	}
+}
