@@ -14,6 +14,9 @@
 	border-radius: 20px;
 
 	@include devices.phone {
+		position: fixed;
+		top: 0px;
+
 		width: 100vw;
 		border-radius: 0px;
 	}
@@ -33,14 +36,14 @@
 
 		@include devices.phone {
 			border-radius: 0px;
+
+			& > .search__header {
+				display: none;
+			}
 		}
 	}
 
 	&__header {
-		@include devices.phone {
-			display: none;
-		}
-
 		text-align: center;
 		width: 100%;
 

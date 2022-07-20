@@ -12,6 +12,8 @@
 }
 @media only screen and (max-width: 760px) {
   .search {
+    position: fixed;
+    top: 0px;
     width: 100vw;
     border-radius: 0px;
   }
@@ -25,6 +27,9 @@
   .search--top {
     border-radius: 0px;
   }
+  .search--top > .search__header {
+    display: none;
+  }
 }
 .search__header {
   text-align: center;
@@ -32,11 +37,6 @@
   margin: 20px;
   font-size: 32px;
   font-weight: 100;
-}
-@media only screen and (max-width: 760px) {
-  .search__header {
-    display: none;
-  }
 }
 .search__query {
   width: 400px;
@@ -140,9 +140,11 @@
 .results {
   display: grid;
   margin-top: 200px;
+  margin-bottom: 100px;
 }
 @media only screen and (max-width: 760px) {
   .results {
+    margin-top: 100px;
     grid-template-columns: repeat(1, 1fr);
   }
 }
