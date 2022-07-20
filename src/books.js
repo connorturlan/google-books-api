@@ -5,14 +5,14 @@ function createBookCard(book) {
 	card.classList.add("book");
 
 	// create the card elements.
-	let info = book.volumeInfo;
+	const info = book.volumeInfo;
 
 	const img = document.createElement("img");
 	img.classList.add("book__img");
 	img.src =
 		"imageLinks" in info
 			? info.imageLinks.smallThumbnail
-			: "./assets/example.jpg";
+			: "./images/unavailable.png";
 
 	const title = document.createElement("h2");
 	title.classList.add("book__title");
@@ -20,11 +20,13 @@ function createBookCard(book) {
 
 	const author = document.createElement("h3");
 	author.classList.add("book__author");
-	author.innerText = info.authors;
+	author.innerText = (info.authors || []).join(", ") || "Author unavailable";
 
 	const desc = document.createElement("p");
 	desc.classList.add("book__desc");
-	desc.innerText = info.description;
+	desc.innerHTML =
+		(book.searchInfo ? book.searchInfo.textSnippet : info.description) ||
+		"Description unavailable.";
 
 	for (let node of [img, title, author, desc]) {
 		card.appendChild(node);

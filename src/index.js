@@ -10,7 +10,7 @@ async function performSearch() {
 	Results.clear();
 
 	// get the query string.
-	let query = document.getElementById("search-query").value;
+	let query = SearchBar.getQuery();
 
 	// get all books matching the query.
 	let books = await fetchBooks(query);

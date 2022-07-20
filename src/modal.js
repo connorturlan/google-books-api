@@ -4,7 +4,42 @@ const modalPane = document.getElementById("modal--bg");
 
 // set the modal's book.
 export function setBook(book) {
-	modal.querySelector(".book__title").innerText = book.volumeInfo.title;
+	modal.querySelector(".modal__title").innerText = book.volumeInfo.title;
+
+	const info = book.volumeInfo;
+
+	const title = modal.querySelector(".modal__title");
+	title.innerText = info.title;
+
+	const author = modal.querySelector(".modal__author");
+	author.innerText = (info.authors || []).join(", ") || "Author unavailable";
+
+	const desc = modal.querySelector(".modal__desc");
+	desc.innerText = info.description || "Description unavailable.";
+
+	const img = modal.querySelector(".modal__img");
+	img.src =
+		"imageLinks" in info
+			? info.imageLinks.smallThumbnail
+			: "./images/unavailable.png";
+
+	const date = modal.querySelector(".modal__release");
+	date.innerText = "Released: " + (info.publishedDate || "Data unavailable.");
+
+	const country = modal.querySelector(".modal__country");
+	country.innerText =
+		"Released in: " + (book.saleInfo.country || "Data unavailable.");
+
+	const lang = modal.querySelector(".modal__langs");
+	lang.innerText =
+		"Availiable in: " + (info.language || "Description unavailable.");
+
+	const link = modal.querySelector(".modal__link");
+	link.href =
+		info.canonicalVolumeLink || info.infoLink || info.previewLink || "";
+	if (!link.href) {
+		src.tooltip = "Link unavailiable.";
+	}
 }
 
 // show the modal pane.
@@ -19,3 +54,6 @@ export function hide() {
 
 // bind clicking off the modal to hiding the pane.
 modalPane.addEventListener("click", (event) => hide());
+
+// prevent clicking on the modal hiding the modal.
+modal.addEventListener("click", (event) => event.stopPropagation());

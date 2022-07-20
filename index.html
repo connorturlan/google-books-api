@@ -35,15 +35,27 @@
 		<main id="results" class="results"></main>
 		<div id="modal--bg" class="modal__bg modal__bg--hidden">
 			<div id="modal" class="modal">
-				<div class="book">
-					<img src="" alt="" class="book__img" />
-					<h2 class="book__title">book title</h2>
-					<h3 class="book__author">book author</h3>
-					<p class="book__desc">
-						This book is about some really interesting topic that
-						you will 100% like and will never put down!
-					</p>
-				</div>
+				<main class="modal__container">
+					<header>
+						<h2 class="modal__title">book title</h2>
+						<h3 class="modal__author">book author</h3>
+						<p class="modal__desc">
+							This book is about some really interesting topic
+							that you will 100% like and will never put down!
+						</p>
+					</header>
+					<section>
+						<img
+							src="./images/unavailable.png"
+							alt=""
+							class="modal__img"
+						/>
+						<p class="modal__release">release date:</p>
+						<p class="modal__country">released in:</p>
+						<p class="modal__langs">available in:</p>
+						<a class="modal__link">View the book</a>
+					</section>
+				</main>
 			</div>
 		</div>
 	</body>

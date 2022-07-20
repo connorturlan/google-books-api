@@ -1,9 +1,81 @@
 @use "../partials/palette";
 @use "../partials/devices";
+@use "../partials/typography";
+@use "../partials/border";
 
 @use "../modules/defaults.scss";
 
 .modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: space-between;
+
+	width: 650px;
+	height: 350px;
+
+	margin: 20px;
+	padding: 40px;
+	border-radius: 20px;
+
+	background-color: palette.$light;
+
+	font-family: typography.$font;
+	font-weight: 100;
+
+	text-align: justify;
+	text-justify: inter-word;
+
+	@include border.book;
+
+	&:hover {
+		outline: 4px solid palette.$accent;
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 200px;
+	}
+
+	& header {
+		margin-right: 40px;
+	}
+
+	&__title {
+		margin: 10px;
+
+		font-weight: 100;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+
+	&__author {
+		margin: 10px;
+
+		font-weight: 100;
+		font-size: 16px;
+		text-transform: capitalize;
+	}
+
+	&__desc {
+		width: 400px;
+		height: 300px;
+
+		margin: 10px;
+		/* padding: 20px; */
+
+		font-size: 14px;
+
+		overflow-y: scroll;
+	}
+
+	&__img {
+		width: 200px;
+		height: 200px;
+
+		object-fit: contain;
+	}
+
 	&__bg {
 		@include defaults.flex-center;
 

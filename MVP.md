@@ -45,3 +45,72 @@ Application Design (required):
 -   [Using Async Await](https://dmitripavlutin.com/javascript-fetch-async-await/)
 -   [Using Postman to Test APIs](https://www.blazemeter.com/blog/how-use-postman-test-apis)
 -   [Download Postman](https://www.postman.com/downloads/)
+
+{
+  "kind": "books#volume",
+  "id": "ltd5tgEACAAJ",
+  "etag": "BOil6YYqLXk",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/ltd5tgEACAAJ",
+  "volumeInfo": {
+    "title": "Hello, Australia!",
+    "authors": [
+      "McKean Megan"
+    ],
+    "publishedDate": "2018-10",
+    "description": "Join a bunch of cheeky galahs in the latest look-and-find adventure in the Hello...! series. This time we're taking a trip around Australia to discover more about the animals, birds and plants that live here. Along the way, you'll meet some very friendly quokkas, take a ferry to Kangaroo Island, marvel at the Big Things and learn about some places that are sacred to the traditional owners of the land. From sunny Queensland to the ski fields of Victoria, there's so much to see and do around Australia.",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "1760760218"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9781760760212"
+      }
+    ],
+    "readingModes": {
+      "text": false,
+      "image": false
+    },
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=ltd5tgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=ltd5tgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com.au/books?id=ltd5tgEACAAJ&dq=hello&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com.au/books?id=ltd5tgEACAAJ&dq=hello&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Hello_Australia.html?hl=&id=ltd5tgEACAAJ"
+  },
+  "saleInfo": {
+    "country": "AU",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+  },
+  "accessInfo": {
+    "country": "AU",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": false
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=ltd5tgEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+  },
+  "searchInfo": {
+    "textSnippet": "Join a bunch of cheeky galahs in the latest look-and-find adventure in the Hello...! series."
+  }
+}

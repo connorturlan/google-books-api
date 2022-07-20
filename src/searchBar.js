@@ -50,5 +50,6 @@ export function update(query, length, firstSearch = false) {
 	// alert the user if there were no books found.
 	if (length <= 0) {
 		alert(query ? `No books found for "${query}".` : `No query provided.`);
+		showHelp(true);
 	}
 }
