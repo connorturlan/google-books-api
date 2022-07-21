@@ -30,7 +30,10 @@
 	}
 
 	&__img {
+		align-self: center;
 		height: 200px;
+
+		border-radius: 10px;
 
 		object-fit: contain;
 	}

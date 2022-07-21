@@ -110,7 +110,9 @@
   outline: 4px solid #ff9a4a;
 }
 .book__img {
+  align-self: center;
   height: 200px;
+  border-radius: 10px;
   object-fit: contain;
 }
 .book__title {
@@ -226,7 +228,6 @@
   outline: 1px solid #ff9a4a;
 }
 .modal__img {
-  width: 200px;
   height: 200px;
   border-radius: 10px;
   object-fit: contain;
