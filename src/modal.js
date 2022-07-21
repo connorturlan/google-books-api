@@ -7,41 +7,29 @@ const modalPane = document.getElementById("modal--bg");
 
 // set the modal's book.
 export function setBook(book) {
-	modal.querySelector(".modal__title").innerText = book.volumeInfo.title;
-
-	const info = book.volumeInfo;
-
 	const title = modal.querySelector(".modal__title");
-	title.innerText = info.title;
+	title.innerText = book.title;
 
 	const author = modal.querySelector(".modal__author");
-	author.innerText = (info.authors || []).join(", ") || "Author unavailable";
+	author.innerText = book.authors;
 
 	const desc = modal.querySelector(".modal__desc");
-	desc.innerHTML = info.description || "Description unavailable.";
+	desc.innerHTML = book.description;
 
 	const img = modal.querySelector(".modal__img");
-	img.src =
-		"imageLinks" in info
-			? info.imageLinks.smallThumbnail
-			: "./images/unavailable.png";
+	img.src = book.imageLink || "./images/unavailable.png";
 
 	const date = modal.querySelector(".modal__release");
-	date.innerText = "Released: " + (info.publishedDate || "Data unavailable.");
+	date.innerText = "Released: " + book.releaseDate;
 
 	const country = modal.querySelector(".modal__country");
-	country.innerText =
-		"Released in: " +
-		(regionNames.of(book.saleInfo.country) || "Data unavailable.");
+	country.innerText = "Released in: " + book.country;
 
 	const lang = modal.querySelector(".modal__langs");
-	lang.innerText =
-		"Availiable in: " +
-		(languageNames.of(info.language) || "Description unavailable.");
+	lang.innerText = "Availiable in: " + book.language;
 
 	const link = modal.querySelector(".modal__link");
-	link.href =
-		info.canonicalVolumeLink || info.infoLink || info.previewLink || "";
+	link.href = book.link;
 	if (!link.href) {
 		src.tooltip = "Link unavailiable.";
 	}

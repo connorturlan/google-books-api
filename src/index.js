@@ -27,7 +27,7 @@ async function performSearch() {
 async function fetchBooks(query) {
 	// fetch the books for the api.
 	let books = await searchAPI(query);
-	return books.totalItems > 0 ? books.items : [];
+	return books || []; //books.length > 0 ? books : [];
 }
 
 // attach the results.render to whenever the search button is pressed.
