@@ -81,9 +81,11 @@
 .search__help {
   display: inline-block;
   margin: 0px;
-  padding: 10px 20px;
-  text-align: justify;
-  text-justify: inter-word;
+  padding: 20px;
+  list-style: none;
+}
+.search__help li {
+  margin: 10px;
 }
 .search__help--hidden {
   display: none;

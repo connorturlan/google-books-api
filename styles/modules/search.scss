@@ -107,10 +107,13 @@
 	&__help {
 		display: inline-block;
 		margin: 0px;
-		padding: 10px 20px;
+		padding: 20px;
 
-		text-align: justify;
-		text-justify: inter-word;
+		list-style: none;
+
+		& li {
+			margin: 10px;
+		}
 
 		&--hidden {
 			display: none;
