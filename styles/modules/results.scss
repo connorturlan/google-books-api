@@ -21,4 +21,6 @@
 	@include devices.desktop {
 		grid-template-columns: repeat(4, 1fr);
 	}
+
+	@include defaults.hidden;
 }
