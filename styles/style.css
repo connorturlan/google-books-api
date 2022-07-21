@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .search {
   display: flex;
   justify-content: center;
@@ -162,10 +163,9 @@
   flex-direction: column;
   justify-content: start;
   align-items: space-between;
-  width: 650px;
-  height: 350px;
-  margin: 20px;
-  padding: 40px;
+  width: 700px;
+  /* height: 350px; */
+  padding: 20px;
   border-radius: 20px;
   background-color: #f3f3f3;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -173,25 +173,40 @@
   text-align: justify;
   text-justify: inter-word;
   box-shadow: 10px 10px 20px #191f20, -10px -10px 20px #3f4d52;
+  /* & section {
+  	@include devices.phone {
+  		text-align: justify;
+  	}
+  } */
 }
-.modal:hover {
-  outline: 4px solid #ff9a4a;
+@media only screen and (max-width: 760px) {
+  .modal {
+    height: calc(100vh - 40px);
+    width: calc(100vw - 20px);
+    padding: 20px 20px;
+    border-radius: 0px;
+  }
 }
 .modal__container {
   display: grid;
   grid-template-columns: 1fr 200px;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+@media only screen and (max-width: 760px) {
+  .modal__container {
+    grid-template-columns: 1fr;
+  }
 }
 .modal header {
   margin-right: 40px;
 }
 .modal__title {
-  margin: 10px;
   font-weight: 100;
   font-size: 20px;
   text-transform: uppercase;
 }
 .modal__author {
-  margin: 10px;
   font-weight: 100;
   font-size: 16px;
   text-transform: capitalize;
@@ -199,15 +214,44 @@
 .modal__desc {
   width: 400px;
   height: 300px;
-  margin: 10px;
-  /* padding: 20px; */
+  padding: 20px;
   font-size: 14px;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+@media only screen and (max-width: 760px) {
+  .modal__desc {
+    height: 40vh;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+.modal__desc:hover {
+  outline: 1px solid #ff9a4a;
 }
 .modal__img {
   width: 200px;
   height: 200px;
+  border-radius: 10px;
   object-fit: contain;
+}
+@media only screen and (max-width: 760px) {
+  .modal__img {
+    display: none;
+  }
+}
+.modal__exit {
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ff9a4a;
+}
+.modal__exit:hover {
+  background-color: #ffb579;
+}
+.modal__exit::after {
+  content: "✖";
 }
 .modal__bg {
   display: flex;

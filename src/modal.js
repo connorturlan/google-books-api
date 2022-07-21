@@ -60,5 +60,10 @@ export function hide() {
 // bind clicking off the modal to hiding the pane.
 modalPane.addEventListener("click", (event) => hide());
 
+// bind clicking the modal exit to hiding the pane.
+document
+	.querySelector(".modal__exit")
+	.addEventListener("click", (event) => hide());
+
 // prevent clicking on the modal hiding the modal.
 modal.addEventListener("click", (event) => event.stopPropagation());

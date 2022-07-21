@@ -11,11 +11,10 @@
 	justify-content: start;
 	align-items: space-between;
 
-	width: 650px;
-	height: 350px;
+	width: 700px;
+	/* height: 350px; */
 
-	margin: 20px;
-	padding: 40px;
+	padding: 20px;
 	border-radius: 20px;
 
 	background-color: palette.$light;
@@ -26,32 +25,45 @@
 	text-align: justify;
 	text-justify: inter-word;
 
-	@include border.book;
-
-	&:hover {
-		outline: 4px solid palette.$accent;
+	@include devices.phone {
+		height: calc(100vh - 40px);
+		width: calc(100vw - 20px);
+		padding: 20px 20px;
+		border-radius: 0px;
 	}
+
+	@include border.book;
 
 	&__container {
 		display: grid;
 		grid-template-columns: 1fr 200px;
+
+		margin-top: 20px;
+
+		overflow-y: auto;
+
+		@include devices.phone {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	& header {
 		margin-right: 40px;
 	}
 
-	&__title {
-		margin: 10px;
+	/* & section {
+		@include devices.phone {
+			text-align: justify;
+		}
+	} */
 
+	&__title {
 		font-weight: 100;
 		font-size: 20px;
 		text-transform: uppercase;
 	}
 
 	&__author {
-		margin: 10px;
-
 		font-weight: 100;
 		font-size: 16px;
 		text-transform: capitalize;
@@ -60,20 +72,52 @@
 	&__desc {
 		width: 400px;
 		height: 300px;
+		padding: 20px;
 
-		margin: 10px;
-		/* padding: 20px; */
+		@include devices.phone {
+			height: 40vh;
+			width: 100%;
+			grid-template-columns: 1fr;
+		}
 
 		font-size: 14px;
 
-		overflow-y: scroll;
+		overflow-y: auto;
+
+		&:hover {
+			outline: 1px solid palette.$accent;
+		}
 	}
 
 	&__img {
 		width: 200px;
 		height: 200px;
+		border-radius: 10px;
 
 		object-fit: contain;
+
+		@include devices.phone {
+			display: none;
+		}
+	}
+
+	&__exit {
+		align-self: flex-end;
+
+		width: 40px;
+		height: 40px;
+		border: none;
+		border-radius: 50%; //10px;
+
+		background-color: palette.$accent;
+
+		&:hover {
+			background-color: palette.$accent-hover;
+		}
+
+		&::after {
+			content: "\002716";
+		}
 	}
 
 	&__bg {
