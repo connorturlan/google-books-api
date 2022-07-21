@@ -69,7 +69,7 @@
 
 		@include devices.phone {
 			font-size: 24px;
-			width: 60vw;
+			max-width: 60vw;
 
 			margin: 5px;
 		}
@@ -92,7 +92,7 @@
 
 		@include devices.phone {
 			font-size: 18px;
-			width: 20vw;
+			width: 30vw;
 
 			margin: 5px;
 		}

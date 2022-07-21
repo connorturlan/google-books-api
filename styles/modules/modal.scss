@@ -6,13 +6,10 @@
 @use "../modules/defaults.scss";
 
 .modal {
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
-	align-items: space-between;
+	display: grid;
+	grid-template-rows: 40px 1fr;
 
 	width: 700px;
-	/* height: 350px; */
 
 	padding: 20px;
 	border-radius: 20px;
@@ -102,7 +99,7 @@
 	}
 
 	&__exit {
-		align-self: flex-end;
+		justify-self: end;
 
 		width: 40px;
 		height: 40px;
