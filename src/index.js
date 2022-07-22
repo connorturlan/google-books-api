@@ -1,10 +1,9 @@
-import { searchAPI } from "./api.js";
+import { searchAPI, lastQuery } from "./api.js";
 import * as Results from "./results.js";
 import * as SearchBar from "./searchBar.js";
 import * as Modal from "./modal.js";
 
 let firstSearch = true;
-let lastQuery = "";
 
 async function performSearch(append = false) {
 	SearchBar.showWaiting();
@@ -12,6 +11,8 @@ async function performSearch(append = false) {
 
 	// get the query string.
 	let query = SearchBar.getQuery();
+
+	if (lastQuery && lastQuery !== query) Results.clear();
 
 	// get all books matching the query.
 	let books = await fetchBooks(query);

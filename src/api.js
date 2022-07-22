@@ -5,7 +5,7 @@ const API_KEY = "AIzaSyAUHYgEMt0T9pnLUCNlgq_1Bg90r3B41wE";
 
 const numberOfResults = 36;
 let currentlyLoadedBooks = 0;
-let lastQuery = "";
+export let lastQuery = "";
 
 const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
 const languageNames = new Intl.DisplayNames(["en"], { type: "language" });
