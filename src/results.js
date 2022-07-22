@@ -1,3 +1,4 @@
+import { resetBookCount } from "./api.js";
 import { getBookCards } from "./books.js";
 
 // get the results container.
@@ -15,6 +16,9 @@ export function hide() {
 
 // clear all book search results.
 export function clear() {
+	// reset the loaded book counter within the API.
+	resetBookCount();
+
 	// remove all children from the results grid.
 	Array.from(results.children).reduce(
 		(n, child) => results.removeChild(child),
@@ -22,15 +26,34 @@ export function clear() {
 	);
 }
 
-// update the results section of the page with given entries of books.
-export function update(books) {
-	hide();
-	clear();
+export function appendCards(books) {
+	// remove the append card if it exists.
+	const append = results.querySelector(".card__append");
+	if (append) results.removeChild(append);
 
-	// process all the books into cards and append them to the results.
 	if (books.length > 0) {
 		const cards = getBookCards(books);
 		cards.reduce((n, card) => results.appendChild(card), null);
 		show();
 	}
+}
+
+export function appendLoadingCard(func) {
+	const append = document.createElement("button");
+	append.classList.add("card", "card__append");
+	append.innerText = "Load more results.";
+
+	append.addEventListener("click", (event) => {
+		func();
+	});
+
+	results.appendChild(append);
+}
+
+// update the results section of the page with given entries of books.
+export function update(books) {
+	hide();
+
+	// process all the books into cards and append them to the results.
+	appendCards(books);
 }

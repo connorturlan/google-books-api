@@ -91,7 +91,7 @@
   display: none;
 }
 
-.book {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -108,31 +108,41 @@
   text-justify: inter-word;
   box-shadow: 10px 10px 20px #191f20, -10px -10px 20px #3f4d52;
 }
-.book:hover {
+.card:hover {
   outline: 4px solid #ff9a4a;
 }
-.book__img {
+.card__img {
   align-self: center;
   height: 200px;
   border-radius: 10px;
-  object-fit: contain;
+  object-fit: fit-content;
 }
-.book__title {
+.card__title {
   margin: 10px;
   font-weight: 100;
   font-size: 20px;
   text-transform: uppercase;
 }
-.book__author {
+.card__author {
   margin: 10px;
   font-weight: 100;
   font-size: 16px;
   text-transform: capitalize;
 }
-.book__desc {
+.card__desc {
   margin: 10px;
   font-size: 14px;
   overflow-y: hidden;
+}
+.card__append {
+  grid-column: span 4;
+  align-self: start;
+  width: fit-content;
+  height: 60px;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
 }
 
 .results {

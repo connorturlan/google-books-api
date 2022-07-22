@@ -2,7 +2,7 @@
 @use "../partials/typography";
 @use "../partials/border";
 
-.book {
+.card {
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
@@ -23,7 +23,7 @@
 	text-align: justify;
 	text-justify: inter-word;
 
-	@include border.book;
+	@include border.card;
 
 	&:hover {
 		outline: 4px solid palette.$accent;
@@ -35,7 +35,7 @@
 
 		border-radius: 10px;
 
-		object-fit: contain;
+		object-fit: fit-content;
 	}
 
 	&__title {
@@ -60,5 +60,21 @@
 		font-size: 14px;
 
 		overflow-y: hidden;
+	}
+
+	// special card for appending results.
+	&__append {
+		grid-column: span 4;
+		align-self: start;
+
+		width: fit-content;
+		height: 60px;
+
+		justify-self: center;
+
+		justify-content: center;
+		align-items: center;
+
+		font-size: 24px;
 	}
 }

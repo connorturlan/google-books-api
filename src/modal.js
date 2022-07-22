@@ -7,6 +7,7 @@ const modalPane = document.getElementById("modal--bg");
 
 // set the modal's book.
 export function setBook(book) {
+	// modify the modal pane to include the book's information.
 	const title = modal.querySelector(".modal__title");
 	title.innerText = book.title;
 

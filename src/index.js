@@ -3,11 +3,12 @@ import * as Results from "./results.js";
 import * as SearchBar from "./searchBar.js";
 import * as Modal from "./modal.js";
 
-var firstSearch = true;
+let firstSearch = true;
+let lastQuery = "";
 
-async function performSearch() {
+async function performSearch(append = false) {
 	SearchBar.showWaiting();
-	Results.clear();
+	if (!append) Results.clear();
 
 	// get the query string.
 	let query = SearchBar.getQuery();
@@ -20,7 +21,22 @@ async function performSearch() {
 	SearchBar.showReady();
 
 	// update the grid with all books found.
-	Results.update(books);
+	if (!append) {
+		Results.update(books);
+	} else {
+		Results.appendCards(books);
+	}
+
+	// append a card at the end of the result ot load more results.
+	Results.appendLoadingCard(performSearchAppend);
+}
+
+async function performSearchNew() {
+	performSearch(false);
+}
+
+async function performSearchAppend() {
+	performSearch(true);
 }
 
 // fetch the books from the google api.
@@ -31,8 +47,15 @@ async function fetchBooks(query) {
 }
 
 // attach the results.render to whenever the search button is pressed.
-let search = document.querySelector(".search");
+const search = document.querySelector(".search");
 search.addEventListener("submit", (event) => {
 	event.preventDefault();
-	performSearch();
+	performSearchNew();
 });
+
+/* const append = document.querySelector("#append-button");
+append.addEventListener("click", (event) => {
+	event.preventDefault();
+	performSearchAppend();
+});
+*/

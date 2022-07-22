@@ -9,7 +9,7 @@ function showStatus(isWaiting) {
 	let btn = search.querySelector("#search-button");
 	if (isWaiting) {
 		btn.classList.add("search__submit--wait");
-		btn.value = "Searching...";
+		btn.value = "Loading...";
 	} else {
 		btn.classList.remove("search__submit--wait");
 		btn.value = "Search";
