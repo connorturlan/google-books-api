@@ -134,16 +134,6 @@
   font-size: 14px;
   overflow-y: hidden;
 }
-.card__append {
-  grid-column: span 4;
-  align-self: start;
-  width: fit-content;
-  height: 60px;
-  justify-self: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-}
 
 .results {
   display: grid;
@@ -173,6 +163,35 @@
 }
 .results--hidden {
   display: none;
+}
+.results__append {
+  align-self: start;
+  width: fit-content;
+  height: 60px;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+@media only screen and (max-width: 760px) {
+  .results__append {
+    grid-column: span 1;
+  }
+}
+@media only screen and (min-width: 761px) and (max-width: 1200px) {
+  .results__append {
+    grid-column: span 2;
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
+  .results__append {
+    grid-column: span 3;
+  }
+}
+@media only screen and (min-width: 1601px) {
+  .results__append {
+    grid-column: span 4;
+  }
 }
 
 .modal {

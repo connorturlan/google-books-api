@@ -12,8 +12,6 @@ async function performSearch(append = false) {
 	// get the query string.
 	let query = SearchBar.getQuery();
 
-	/* if (lastQuery && lastQuery !== query) Results.clear(); */
-
 	// get all books matching the query.
 	let books = await fetchBooks(append ? lastQuery : query);
 

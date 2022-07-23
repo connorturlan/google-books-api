@@ -24,4 +24,31 @@
 	}
 
 	@include defaults.hidden;
+
+	// special card for appending results.
+	&__append {
+		@include devices.phone {
+			grid-column: span 1;
+		}
+		@include devices.tablet {
+			grid-column: span 2;
+		}
+		@include devices.laptop {
+			grid-column: span 3;
+		}
+		@include devices.desktop {
+			grid-column: span 4;
+		}
+		align-self: start;
+
+		width: fit-content;
+		height: 60px;
+
+		justify-self: center;
+
+		justify-content: center;
+		align-items: center;
+
+		font-size: 24px;
+	}
 }

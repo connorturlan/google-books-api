@@ -28,7 +28,7 @@ export function clear() {
 
 export function appendCards(books) {
 	// remove the append card if it exists.
-	const append = results.querySelector(".card__append");
+	const append = results.querySelector(".results__append");
 	if (append) results.removeChild(append);
 
 	if (books.length > 0) {
@@ -40,7 +40,7 @@ export function appendCards(books) {
 
 export function appendLoadingCard(func) {
 	const append = document.createElement("button");
-	append.classList.add("card", "card__append");
+	append.classList.add("card", "results__append");
 	append.innerText = "Load more results.";
 
 	append.addEventListener("click", (event) => {
