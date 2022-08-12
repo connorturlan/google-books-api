@@ -4,13 +4,13 @@
 
 <button style="border: 1px solid white; border-radius:5px; padding: 10px 20px; background-color:white;"><a href="https://connor-turlan.github.io/google-books-api/">View the Project</a></button>
 
-A search engine using the google books api
-
 ## Setup
 
 ## MVP
 
 ## Goals
+
+A search engine using the Google Books API.
 
 ## Known Issues
 
