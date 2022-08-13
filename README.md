@@ -58,7 +58,7 @@ A search engine using the Google Books API.
 
 ## Similar Projects
 
-[Google Books API - React]()
+[Google Books API - React](https://github.com/Connor-Turlan/google-books-react)
 
 -   A rewrite of the Google Books API project using the React.js framework.
 
