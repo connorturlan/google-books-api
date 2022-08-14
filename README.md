@@ -17,7 +17,7 @@ Page should include the following:
 -   Form containing a text input and a submit / search button
 -   A grid of books
 
-    Instructions:
+Instructions:
 
 -   When the submit button is clicked you need the request books from the Google books API using the input value as your query string
 -   The books that you receive should be rendered in the books grid.
@@ -44,7 +44,11 @@ Additionally:
 
 ## Goals
 
-A search engine using the Google Books API.
+The goal of this project was to create a responsive interface for the Google Books API.
+
+In extention to the MVP:
+
+-   I wanted to include the ability to load more books relating to the current search.
 
 ## Known Issues
 
